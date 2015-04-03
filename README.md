@@ -9,7 +9,7 @@ A bunch of vim quick tricks
 :g/^\(.*\)$\n\1$/p
 ```
 
-### Deleting lines that do not contain a given pattern
+### Deleting lines that contain or not a given pattern
 Let's say that you have the following log file and you want to delete all lines except the one that has the request path info.
 ```
 2015-04-02T23:43:25.191908+00:00 app[web.1]: Started GET "/cars/16/models.json?format=json" for 189.71.47.35 at 2015-04-02 20:43:25 -0300
@@ -19,5 +19,6 @@ Let's say that you have the following log file and you want to delete all lines 
 ```
 
 ```vim
-:g!/GET/d
+:g!/GET/d " will preserve the first line
+:g/GET/d  " will remove the first line
 ```
