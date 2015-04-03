@@ -19,5 +19,5 @@ Let's say that you have the following log file and you want to delete all lines 
 ```
 
 ```vim
-:g!/GET/d "
+:g!/GET/d
 ```
